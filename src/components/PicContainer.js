@@ -22,7 +22,11 @@ class PicContainer extends Component {
     Clicked = (event) => {
         if (event.target.alt === this.state.lastClicked) {
             alert("You Lose!");
-            window.location.reload();
+            this.setState({
+                score: 0,
+                lastClicked: ''
+            })
+            this.Shuffle();
         } else {
             this.setState({
                 score: this.state.score + 1,

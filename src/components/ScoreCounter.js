@@ -2,7 +2,10 @@ import React from "react";
 
 function ScoreCounter(props){
     return(
-        <p className="score">SCORE: {props.score}</p>
+        <div className="score">
+            <p>SCORE: {props.score}</p>
+            <p>HIGH SCORE: {props.high}</p>
+        </div>
     )
 }
 

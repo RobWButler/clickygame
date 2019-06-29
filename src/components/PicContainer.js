@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import imglist from "./imglist.json";
 import HUD from "./HUD";
 
-
 class PicContainer extends Component {
     state={
         imgs: imglist,
-        score: 0,
+        score: 0,       
+        highScore: 0,
         lastClicked: ''
+ 
     };
 
     shuffle = array => {
@@ -19,7 +20,13 @@ class PicContainer extends Component {
     };
 
     Clicked = (event) => {
+        document.getElementById("button").play()
         if (event.target.alt === this.state.lastClicked) {
+            if (this.state.score > this.state.highScore){
+                this.setState({
+                    highScore: this.state.score
+                })
+            }
             alert("You Lose!");
             this.setState({
                 score: 0,
@@ -39,10 +46,13 @@ class PicContainer extends Component {
         return(
             <div>
                 <div className="HUD">
-                                    <HUD
+                    <audio id="button" src="./audio/button.wav"/>
+                    <HUD
                         score={this.state.score}
+                        high={this.state.highScore}
                         src={this.state.path}
-                        lastClicked={this.state.lastClicked}/>
+                        lastClicked={this.state.lastClicked}
+                    />
                 </div>
                 <div className="picContainer">            
                     {this.state.imgs.map(pic =>

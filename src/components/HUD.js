@@ -12,9 +12,10 @@ function HUD(props){
         }
     }
     return(
-        <div>        
+        <div className="row">
             <ScoreCounter
-                score={props.score}/>
+                score={props.score}
+                high={props.high}/>
             {showLastColor(props.lastClicked)}
         </div>
 

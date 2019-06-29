@@ -20,11 +20,16 @@ class PicContainer extends Component {
     };
 
     Clicked = (event) => {
-        this.setState({
-            score: this.state.score + 1,
-            lastClicked: event.target.alt
-        })
-        this.Shuffle()
+        if (event.target.alt === this.state.lastClicked) {
+            alert("You Lose!");
+            window.location.reload();
+        } else {
+            this.setState({
+                score: this.state.score + 1,
+                lastClicked: event.target.alt
+            })
+            this.Shuffle()
+        }
     };
 
     showLastColor = (lastColor) => {

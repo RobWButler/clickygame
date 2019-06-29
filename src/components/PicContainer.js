@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import imglist from "./imglist.json"
-import ScoreCounter from "./ScoreCounter"
-import LastClickedReview from "./LastClickedReview"
+import imglist from "./imglist.json";
+import HUD from "./HUD";
 
 
 class PicContainer extends Component {
@@ -36,31 +35,23 @@ class PicContainer extends Component {
         }
     };
 
-    showLastColor = (lastColor) => {
-        if(lastColor){
-            return <LastClickedReview
-            path={"./img/" + this.state.lastClicked + ".png"}
-        />
-        }
-    }
-
     render(){
         return(
-            <div className="">
-            <ScoreCounter
-                score={this.state.score}
-            />
-            {this.showLastColor(this.state.lastClicked)}
-            {this.state.imgs.map(pic =>
-                <img 
-                    className="col-md-4 pic"
-                    key={pic.color}
-                    alt={pic.color}
-                    title={pic.color}
-                    src={pic.path}
-                    onClick={this.Clicked}
-                />
-            )}
+            <div className="">            
+                <HUD
+                    score={this.state.score}
+                    src={this.state.path}
+                    lastClicked={this.state.lastClicked}/>
+                {this.state.imgs.map(pic =>
+                    <img 
+                        className="col-md-4 pic"
+                        key={pic.color}
+                        alt={pic.color}
+                        title={pic.color}
+                        src={pic.path}
+                        onClick={this.Clicked}
+                    />
+                )}
             </div>
         )
     };

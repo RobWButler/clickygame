@@ -37,21 +37,25 @@ class PicContainer extends Component {
 
     render(){
         return(
-            <div className="">            
-                <HUD
-                    score={this.state.score}
-                    src={this.state.path}
-                    lastClicked={this.state.lastClicked}/>
-                {this.state.imgs.map(pic =>
-                    <img 
-                        className="col-md-4 pic"
-                        key={pic.color}
-                        alt={pic.color}
-                        title={pic.color}
-                        src={pic.path}
-                        onClick={this.Clicked}
-                    />
-                )}
+            <div>
+                <div className="HUD">
+                                    <HUD
+                        score={this.state.score}
+                        src={this.state.path}
+                        lastClicked={this.state.lastClicked}/>
+                </div>
+                <div className="picContainer">            
+                    {this.state.imgs.map(pic =>
+                        <img 
+                            className="col-md-4 pic"
+                            key={pic.color}
+                            alt={pic.color}
+                            title={pic.color}
+                            src={pic.path}
+                            onClick={this.Clicked}
+                        />
+                    )}
+                </div>
             </div>
         )
     };

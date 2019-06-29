@@ -5,6 +5,7 @@ body{
 .App {
   padding-top: 1rem;
   text-align: center;
+
 }
 
 .App-logo {
@@ -28,8 +29,11 @@ body{
   color: #61dafb;
 }
 
-.pic{
+.picContainer{
   filter: drop-shadow(1pt 1pt 3pt black);
+}
+
+.pic{
   padding: 1px;
   border-radius:5px;
   max-width:300px;

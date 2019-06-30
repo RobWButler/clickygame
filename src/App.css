@@ -48,10 +48,11 @@ body{
 }
 
 .score{
+  max-width:10vw;
   color: white;
-  font-size: 2rem;
+  font-size: 16pt;
   position: absolute;
-  top: 6rem;
+  top: 10vh;
   left: 1rem;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
@@ -63,7 +64,7 @@ body{
   color: white;
   float:left;
   position: absolute;
-  top: 15rem;
+  top: 22vh;
   left: 1rem;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
@@ -72,5 +73,34 @@ body{
 }
 
 .lastColor-pic{
-  max-width: 125px;
+  max-width: 8vw;
+}
+
+@media only screen and (max-width: 400px) {
+  .App-header, h1{
+    padding-top: 2pt;
+    font-size: 12pt;
+  }
+  
+  .pic{
+    max-width: 30vw;
+  }
+
+  .score{
+    font-size: 100%;
+    max-width: 33vw;
+    bottom: 3pt;
+    top: initial;
+  }
+  
+  .lastColor{
+    top: initial;    
+    left: initial;
+    bottom: 3pt;
+    right: 1rem;
+  }
+
+  .lastColor-pic{
+    max-width: 25vw;
+  }
 }

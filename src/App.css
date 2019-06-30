@@ -48,11 +48,18 @@ body{
 }
 
 .score{
+<<<<<<< HEAD
   max-width:10vw;
   color: white;
   font-size: 16pt;
   position: absolute;
   top: 10vh;
+=======
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 6rem;
+>>>>>>> parent of c09c20a... Updates
   left: 1rem;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
@@ -64,7 +71,11 @@ body{
   color: white;
   float:left;
   position: absolute;
+<<<<<<< HEAD
   top: 22vh;
+=======
+  top: 15rem;
+>>>>>>> parent of c09c20a... Updates
   left: 1rem;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
@@ -73,6 +84,7 @@ body{
 }
 
 .lastColor-pic{
+<<<<<<< HEAD
   max-width: 8vw;
 }
 
@@ -103,4 +115,7 @@ body{
   .lastColor-pic{
     max-width: 25vw;
   }
+=======
+  max-width: 125px;
+>>>>>>> parent of c09c20a... Updates
 }

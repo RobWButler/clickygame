@@ -1,0 +1,38 @@
+[
+    {
+        "color": "red",
+        "path": "./img/red.png"
+    },
+    {
+        "color": "blue",
+        "path": "./img/blue.png"
+    },
+    {
+        "color": "green",
+        "path": "./img/green.png"
+    },
+    {
+        "color": "black",
+        "path": "./img/black.png"
+    },
+    {
+        "color": "white",
+        "path": "./img/white.png"
+    },
+    {
+        "color": "yellow",
+        "path": "./img/yellow.png"
+    },
+    {
+        "color": "gray",
+        "path": "./img/gray.png"
+    },
+    {
+        "color": "skyblue",
+        "path": "./img/skyblue.png"
+    },
+    {
+        "color": "purple",
+        "path": "./img/purple.png"
+    }
+]
